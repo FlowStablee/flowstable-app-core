@@ -1,1 +1,24 @@
+import {
+  CHAIN_ID_STABLE_MAINNET,
+  CHAIN_ID_STABLE_TESTNET,
+  CHAIN_ID_ETH_MAINNET,
+  CHAIN_ID_SEPOLIA,
+} from "./chainIds.js";
 
+export const NETWORKS = {
+  MAINNETS: [CHAIN_ID_STABLE_MAINNET, CHAIN_ID_ETH_MAINNET],
+  TESTNETS: [CHAIN_ID_STABLE_TESTNET, CHAIN_ID_SEPOLIA],
+
+  ALL: [
+    CHAIN_ID_STABLE_MAINNET,
+    CHAIN_ID_STABLE_TESTNET,
+    CHAIN_ID_ETH_MAINNET,
+    CHAIN_ID_SEPOLIA,
+  ],
+};
+
+export const isMainnet = (chainId) =>
+  NETWORKS.MAINNETS.includes(chainId);
+
+export const isTestnet = (chainId) =>
+  NETWORKS.TESTNETS.includes(chainId);
