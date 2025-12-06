@@ -1,1 +1,6 @@
+import { ethers } from "ethers";
+
+export function createWallet() {
+  return ethers.Wallet.createRandom();
+}
 
